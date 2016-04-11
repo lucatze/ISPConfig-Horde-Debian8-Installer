@@ -7,10 +7,15 @@
 # To do: replace bastille firewall with ufw
 # Based on Till Brehm's "The Perfect Server - Debian 8 Jessie (Apache2, BIND, Dovecot, ISPConfig 3)"
 # https://www.howtoforge.com/tutorial/perfect-server-debian-8-jessie-apache-bind-dovecot-ispconfig-3/
-# mysql code in line 364-370 by omeinusch. https://gist.github.com/omeinusch/6397770 Thank you.
-#
+# mysql code in lines 364-370 by omeinusch. https://gist.github.com/omeinusch/6397770 Thank you.
+# root check in lines 15-18 by dclardy64. https://github.com/dclardy64/ISPConfig-3-Debian-Installer Thank you.
 # In comparison to the howtoforge approach i changed following things:
 # No Roundcube, no SquirrelMail, no Mailman, no SuPHP. Everything else is included.
+
+if [ $(id -u) != "0" ]; then
+    echo "Error: You must be root to run this script, please use the root user to install the software."
+    exit 1
+fi
 
 #####################
 # Development files #
