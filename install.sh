@@ -16,11 +16,11 @@
 # Development files #
 #####################
 
-# These files should be included in perfect_server_with_horde_webmail.zip
+# These files should be included in master.zip on GitHub
 echo
 echo "Downloading some config files."
 echo
-cd
+cd ISPConfig-Horde-Debian8-Installer-master
 wget -q https://www.puca.biz/isp/dovecot-pop3imap.txt
 wget -q https://www.puca.biz/isp/jailkit.txt
 wget -q https://www.puca.biz/isp/pureftpd.txt
@@ -270,9 +270,9 @@ rm -rf jailkit-2.17*
 
 apt-get install -y fail2ban
 
-cat ~/jailkit.txt >> /etc/fail2ban/jail.local		# create jail.local and insert data from jailkit.txt
-cat ~/pureftpd.txt >> /etc/fail2ban/filter.d/pureftpd.conf	# create pureftpd.conf and insert data from pureftpd.txt
-cat ~/dovecot-pop3imap.txt >> /etc/fail2ban/filter.d/dovecot-pop3imap.conf	# create dovecot-pop3imap.txt and insert data from dovecot-pop3imap.txt
+cat ~/ISPConfig-Horde-Debian8-Installer-master/jailkit.txt >> /etc/fail2ban/jail.local		# create jail.local and insert data from jailkit.txt
+cat ~/ISPConfig-Horde-Debian8-Installer-master/pureftpd.txt >> /etc/fail2ban/filter.d/pureftpd.conf	# create pureftpd.conf and insert data from pureftpd.txt
+cat ~/ISPConfig-Horde-Debian8-Installer-master/dovecot-pop3imap.txt >> /etc/fail2ban/filter.d/dovecot-pop3imap.conf	# create dovecot-pop3imap.txt and insert data from dovecot-pop3imap.txt
 
 echo "ignoreregex =" >> /etc/fail2ban/filter.d/postfix-sasl.conf
 service fail2ban restart
