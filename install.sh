@@ -208,6 +208,7 @@ clear
 echo
 echo
 echo -e "Add -> ,usrjquota=quota.user,grpjquota=quota.group,jqfmt=vfsv0"
+echo
 echo "right after -> errors=remount-ro. Make sure to keep the spaces or tab after vfsv0"
 echo "In case there is no errors=remount-ro, you need to add the string with a space or tab after ext4."
 echo "Keep everything after vfsv0."
