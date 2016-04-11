@@ -362,8 +362,10 @@ echo
 echo "Please enter your previously chosen MariaDB root password:"
 echo
 read PASS
+echo
+echo
 echo "Please choose a password for the MariaDB Horde user:"
-echo "Write it down. We will need it later."
+echo "Please write it down. We will need it later."
 echo
 read MARIAPASS
 mysql -uroot -p$PASS <<MYSQL_SCRIPT
