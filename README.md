@@ -15,5 +15,6 @@ Installation:
 10.  cd ISPConfig-Horde-Debian8-Installer-master
 11.  sh install.sh
 
-To make things more comfortable, copy paste and run this entire string:
+To make things more comfortable, copy and run this entire string:
+
 rm /bin/sh && cd /bin && ln -s bash sh && cd && wget https://github.com/lucatze/ISPConfig-Horde-Debian8-Installer/archive/master.zip && apt-get -y install unzip && unzip master.zip && cd ISPConfig-Horde-Debian8-Installer-master && sh install.sh
